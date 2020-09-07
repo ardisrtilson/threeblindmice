@@ -32,35 +32,152 @@
             "firstName": "Rainu",
             "lastName": "Ittycheriah",
             "age": "30",
-            "computerId": 1
+            "computerId": 1,
+            "departmentId": 1,
+            "locationId": 1
         },
         {
-            "id": 1,
+            "id": 2,
             "firstName": "Thomas",
             "lastName": "Mann",
             "age": "27",
-            "computerId": 2
+            "computerId": 2,
+            "departmentId": 3,
+            "locationId": 3
         },
         {
-            "id": 1,
+            "id": 3,
             "firstName": "Emily",
             "lastName": "Dickinson",
             "age": "20",
-            "computerId": 3
+            "computerId": 3,
+            "departmentId": 4,
+            "locationId": 2
         },
         {
-            "id": 1,
+            "id": 4,
             "firstName": "James",
             "lastName": "Baldwin",
             "age": "28",
-            "computerId": 4
+            "computerId": 4,
+            "departmentId": 2,
+            "locationId": 2
         },
         {
-            "id": 1,
+            "id": 5,
             "firstName": "Johnny",
             "lastName": "Marr",
             "age": "35",
-            "computerId": 5
+            "computerId": 5,
+            "departmentId": 3,
+            "locationId": 1
+        }
+    ],
+    "departments": [
+        {
+            "id": 1,
+            "name": "Solid State"
+        },
+        {
+            "id": 2,
+            "name": "IT"
+        },
+        {
+            "id": 3,
+            "name": "Digital"
+        },
+        {
+            "id": 4,
+            "name": "Security"
+        }
+    ],
+    "locations": [
+        {
+        "id": 1,
+        "location": "Memphis" 
+        },
+        {
+        "id": 2,
+        "location": "Nashville" 
+        },
+        {
+        "id": 3,
+        "location": "Atlanta" 
+        }
+    ],
+    "customers": [
+        {
+            "id": 1,
+            "name": "Juniper Distribution"
+        },
+        {
+            "id": 2,
+            "name": "Fairchild"
+        },
+        {
+            "id": 3,
+            "name": "Ingram"
+        },
+        {
+            "id": 4,
+            "name": "Seychelles Computing"
+        }
+    ],
+    "employeeCustomers": [
+        {
+            "id": 1,
+            "customerId": 1,
+            "employeeId": 5
+        },
+        {
+            "id": 2,
+            "customerId": 2,
+            "employeeId": 5
+        },
+        {
+            "id": 3,
+            "customerId": 2,
+            "employeeId": 3
+        },
+        {
+            "id": 4,
+            "customerId": 3,
+            "employeeId": 3
+        },
+        {
+            "id": 5,
+            "customerId": 4,
+            "employeeId": 4
+        },
+        {
+            "id": 6,
+            "customerId": 2,
+            "employeeId": 4
+        },
+        {
+            "id": 7,
+            "customerId": 3,
+            "employeeId": 2
+        },
+        {
+            "id": 8,
+            "customerId": 1,
+            "employeeId": 2
+        },
+        {
+            "id": 9,
+            "customerId": 4,
+            "employeeId": 1
+        },
+        {
+            "id": 10,
+            "customerId": 3,
+            "employeeId": 1
+        },
+        {
+            "id": 11,
+            "customerId": 2,
+            "employeeId": 2
         }
     ]
 }
