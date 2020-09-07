@@ -1,11 +1,12 @@
-import { WorkforceHTMLConverter } from "./employeeHTML.js"
+import { CustomerHTMLConverter } from "./customerHTML.js"
 import { getEmployees, useEmployees } from "./employeeProvider.js"
 import { getCustomers, useCustomers } from "./CustomerProvider.js"
 import { getEmployeeCustomers, useEmployeeCustomers } from "./EmployeeCustomerProvider.js"
 
-const contentTarget = document.querySelector(".employeeContainer")
-let itemHTML = ""
-export const employeeList = () => {
+
+const contentTarget = document.querySelector(".customerContainer")
+
+export const customerList = () => {
     getEmployees().then(() => {
         getCustomers().then(() => {
             getEmployeeCustomers().then(() => {
@@ -14,15 +15,15 @@ export const employeeList = () => {
         let allEmployeeCustomers = useEmployeeCustomers()
 
         const render = () => {
-            contentTarget.innerHTML = allEmployees.map(employee => {
+            contentTarget.innerHTML = allCustomers.map(customer => {
     
-                let relatedEmployees = allEmployeeCustomers.filter(ec => ec.employeeId === employee.id)
+                let relatedEmployees = allEmployeeCustomers.filter(ce => ce.customerId === customer.id)
     
-                relatedEmployees = relatedEmployees.map(ec => {
-                    return allCustomers.find(customer => customer.id === ec.customerId)
+                relatedEmployees = relatedEmployees.map(ce => {
+                    return allEmployees.find(employee => employee.id === ce.employeeId)
                 })
-    
-                const html = WorkforceHTMLConverter(employee, relatedEmployees)
+                    console.log(relatedEmployees)
+                const html = CustomerHTMLConverter(customer, relatedEmployees)
     
                 return html
                 
